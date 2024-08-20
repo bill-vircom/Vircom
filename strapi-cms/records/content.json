@@ -1,0 +1,121 @@
+{
+	"version": 2,
+	"data": {
+		"api::vp-page.vp-page": {
+			"1": {
+				"id": 1,
+				"title": "Dashboard",
+				"uri": "/",
+				"description": "Hello world",
+				"createdAt": "2024-07-03T16:07:42.005Z",
+				"updatedAt": "2024-08-08T16:24:53.624Z",
+				"publishedAt": "2024-07-03T16:07:42.991Z",
+				"locale": "en",
+				"name": "index",
+				"vp_assets": [
+					1
+				],
+				"localizations": [
+					3
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"2": {
+				"id": 2,
+				"title": "Second Page",
+				"uri": "/second-page",
+				"description": "Hello world",
+				"createdAt": "2024-07-04T13:24:04.187Z",
+				"updatedAt": "2024-08-08T15:50:06.102Z",
+				"publishedAt": "2024-07-04T13:24:05.383Z",
+				"locale": "en",
+				"name": "second_page",
+				"vp_assets": [
+					1
+				],
+				"localizations": [
+					4
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"3": {
+				"id": 3,
+				"title": "Tableau de bord",
+				"uri": "/",
+				"description": "Bonjour le monde",
+				"createdAt": "2024-08-05T12:32:47.942Z",
+				"updatedAt": "2024-08-08T16:24:53.616Z",
+				"publishedAt": "2024-08-05T12:33:03.526Z",
+				"locale": "fr",
+				"name": "index",
+				"vp_assets": [
+					2
+				],
+				"localizations": [
+					1
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"4": {
+				"id": 4,
+				"title": "Seconde Page",
+				"uri": "/second-page",
+				"description": "Salut le monde",
+				"createdAt": "2024-08-07T17:31:33.854Z",
+				"updatedAt": "2024-08-08T15:50:06.092Z",
+				"publishedAt": "2024-08-07T17:31:35.795Z",
+				"locale": "fr",
+				"name": "second_page",
+				"vp_assets": [
+					2
+				],
+				"localizations": [
+					2
+				],
+				"createdBy": null,
+				"updatedBy": null
+			}
+		},
+		"api::vp-asset.vp-asset": {
+			"1": {
+				"id": 1,
+				"key": "hello_world",
+				"value": "Hello world",
+				"createdAt": "2024-07-03T16:05:58.381Z",
+				"updatedAt": "2024-08-05T12:50:14.335Z",
+				"publishedAt": "2024-07-03T16:06:02.849Z",
+				"locale": "en",
+				"vp_pages": [
+					1,
+					2
+				],
+				"localizations": [
+					2
+				],
+				"createdBy": null,
+				"updatedBy": null
+			},
+			"2": {
+				"id": 2,
+				"key": "hello_world",
+				"value": "Bonjour le monde",
+				"createdAt": "2024-08-05T12:32:08.082Z",
+				"updatedAt": "2024-08-05T12:50:14.327Z",
+				"publishedAt": "2024-08-05T12:32:08.873Z",
+				"locale": "fr",
+				"vp_pages": [
+					3,
+					4
+				],
+				"localizations": [
+					1
+				],
+				"createdBy": null,
+				"updatedBy": null
+			}
+		}
+	}
+}
