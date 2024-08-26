@@ -9,10 +9,12 @@ import NavBarI18n from '@core/components/I18n.vue'
 
 // @layouts plugin
 import { VerticalNavLayout } from '@layouts'
-import { useContentStore } from '@/store/contentStore'
+// import { useContentStore } from '@/store/contentStore'
 
 const configStore = useConfigStore()
-const { navItems } = useContentStore()
+// const { navItems } = useContentStore()
+
+import navItems from '@/navigation/horizontal'
 
 // ℹ️ Provide animation name for vertical nav collapse icon.
 const verticalNavHeaderActionAnimationName = ref<null | 'rotate-back-180' | 'rotate-180'>(null)
