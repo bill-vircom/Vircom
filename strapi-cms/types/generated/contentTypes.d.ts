@@ -1047,7 +1047,8 @@ export interface ApiVpProduitVpProduit extends Schema.CollectionType {
   info: {
     singularName: 'vp-produit';
     pluralName: 'vp-produits';
-    displayName: 'VP_produits';
+    displayName: 'VP_product';
+    description: '';
   };
   options: {
     draftAndPublish: true;
