@@ -793,38 +793,14 @@ export interface ApiVpAlertVpAlert extends Schema.CollectionType {
   info: {
     singularName: 'vp-alert';
     pluralName: 'vp-alerts';
-    displayName: 'VP_alert';
+    displayName: 'vp_alert';
   };
   options: {
     draftAndPublish: true;
   };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
   attributes: {
-    title: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    key: Attribute.String &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: false;
-        };
-      }> &
-      Attribute.SetMinMaxLength<{
-        minLength: 4;
-      }>;
-    description: Attribute.Text &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    key: Attribute.String & Attribute.Required & Attribute.Unique;
+    description: Attribute.Blocks;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -840,12 +816,6 @@ export interface ApiVpAlertVpAlert extends Schema.CollectionType {
       'admin::user'
     > &
       Attribute.Private;
-    localizations: Attribute.Relation<
-      'api::vp-alert.vp-alert',
-      'oneToMany',
-      'api::vp-alert.vp-alert'
-    >;
-    locale: Attribute.String;
   };
 }
 
@@ -914,6 +884,7 @@ export interface ApiVpNewVpNew extends Schema.CollectionType {
     singularName: 'vp-new';
     pluralName: 'vp-news';
     displayName: 'VP_news';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -945,6 +916,12 @@ export interface ApiVpNewVpNew extends Schema.CollectionType {
       }> &
       Attribute.SetMinMaxLength<{
         minLength: 4;
+      }>;
+    duration: Attribute.DateTime &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
       }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;

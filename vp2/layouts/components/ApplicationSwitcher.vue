@@ -24,9 +24,6 @@ navItems.forEach((item) => {
 // ℹ️ Provide animation name for vertical nav collapse icon.
 const verticalNavHeaderActionAnimationName = ref<null | 'rotate-back-180' | 'rotate-180'>(null)
 
-// const selectedItem = ref('')
-const items = ['Programming', 'Design', 'Vue', 'Vuetify']
-
 watch([
   () => configStore.isVerticalNavCollapsed,
   () => configStore.isAppRTL,
@@ -50,26 +47,6 @@ watch([
         >
           <VIcon icon="ri-menu-line" />
         </IconBtn>
-
-        <div class="d-flex w-50 gap-2">
-          <VBtn color="primary">
-            Secondary
-          </VBtn>
-
-          <VCombobox
-            prepend-icon="ri:search-line"
-            :items="items"
-            :placeholder="$t('search')"
-            density="compact"
-            clearable
-          />
-
-          <VBtn
-            icon="ri-user-add-line"
-            color="secondary"
-            rounded="sm"
-          />
-        </div>
 
         <VSpacer />
 

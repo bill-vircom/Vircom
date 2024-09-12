@@ -4,41 +4,20 @@
   "info": {
     "singularName": "vp-alert",
     "pluralName": "vp-alerts",
-    "displayName": "VP_alert"
+    "displayName": "vp_alert"
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
-    "title": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "key": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": false
-        }
-      },
       "type": "string",
-      "minLength": 4
+      "required": true,
+      "unique": true
     },
     "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "text"
+      "type": "blocks"
     }
   }
 }
