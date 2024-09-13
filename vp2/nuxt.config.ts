@@ -116,6 +116,7 @@ export default defineNuxtConfig({
 
     build: {
       chunkSizeWarningLimit: 5000,
+      sourcemap: true
     },
 
     optimizeDeps: {

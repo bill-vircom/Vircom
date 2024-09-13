@@ -819,6 +819,36 @@ export interface ApiVpAlertVpAlert extends Schema.CollectionType {
   };
 }
 
+export interface ApiVpAppVpApp extends Schema.CollectionType {
+  collectionName: 'vp_apps';
+  info: {
+    singularName: 'vp-app';
+    pluralName: 'vp-apps';
+    displayName: 'VP_app';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::vp-app.vp-app',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::vp-app.vp-app',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiVpAssetVpAsset extends Schema.CollectionType {
   collectionName: 'vp_assets';
   info: {
@@ -1165,6 +1195,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::vp-alert.vp-alert': ApiVpAlertVpAlert;
+      'api::vp-app.vp-app': ApiVpAppVpApp;
       'api::vp-asset.vp-asset': ApiVpAssetVpAsset;
       'api::vp-new.vp-new': ApiVpNewVpNew;
       'api::vp-page.vp-page': ApiVpPageVpPage;

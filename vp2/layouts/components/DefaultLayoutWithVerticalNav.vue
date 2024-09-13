@@ -51,17 +51,18 @@ watch([
           <VIcon icon="ri-menu-line" />
         </IconBtn>
 
-        <div class="d-flex w-50 gap-2">
-          <VBtn color="primary">
-            Secondary
+        <div class="d-none d-sm-flex w-50 ">
+          <VBtn color="primary" class="mr-8">
+            {{ $t("button_all_customers") }}
           </VBtn>
 
-          <VCombobox
-            prepend-icon="ri:search-line"
+          <VAutocomplete
+            prepend-inner-icon="ri-search-line"
             :items="items"
-            :placeholder="$t('search')"
+            :placeholder="$t('placeholder_search')"
             density="compact"
             clearable
+            class="mr-2"
           />
 
           <VBtn
@@ -92,7 +93,7 @@ watch([
     </template>
 
     <!-- 👉 Customizer -->
-    <!-- <TheCustomizer /> -->
+    <AppSwitcher />
   </VerticalNavLayout>
 </template>
 
